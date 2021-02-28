@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        /* 
+        
+        .container{
+            display: grid;
+            grid-template-columns: 100px 200px 500px 100px  ; /* kolumny siatki, kazda z wartosci opisuje wartosc kolumny */
+            /* 1 fr 1 fr */
+            /* repeat (12, 1fr) liczba , szerokosc */
+            /* jezeli mamy 10 a podamy 12 to grid zostawi miejsce   grid-template-rows: minmax(200px, auto);  /*  */
+            /* grid-gap:  ;   PRZESTARZALE   
+            grid
+        } */
+
+        body{
+            font-size: 1.5rem;
+            font-family: sans-serif;
+        }
+        .box {
+            background-color: #538bb1 ;
+            color: #fff;
+        }
+        .container{
+            width: 500px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            background-color: black;
+        }
+        .box1{
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+        }
+        .box2{
+            grid-column: 2 / span 2; /* 2 kolumny od wartosci podaneej wczesniej */
+            grid-row: 3 / 7;
+        }
+        .box3{
+            grid-column: span 4 / 9; /* 4 kolumny od 9 */
+            grid-row: 5 / 7;
+        }
+        .box4{
+            grid-column: 1 /  8;
+            grid-row: 8; /* domyslnie dodaje 1 kolumne */
+        }
+
+        /* 
+            grid-template-area [    grid-template-columns: repeat(8, 1fr);  UWAGI: siatka 8x8
+                                    grid-template-rows: repeat(8, 1fr);    ]
+
+               "hrader hrader hrader hrader hrader hrader hrader hrader "
+               "........"
+               "content content content content content . sidebar sidebar"
+               "content content content content content . sidebar sidebar"
+               "content content content content content . sidebar sidebar"
+               "content content content content content . sidebar sidebar"
+               " . . . . . . . ."                 
+               "footer footer footer footer footer footer footer footer" 
+               ;
+--------------------------------------------------------------------------------------------------------
+
+            TERAZ MUSIMY PODAC CO PRZYPADA DO SZABLONU
+
+--------------------------------------------------------------------------------------------------------
+
+                            header {grid-area: header;}
+                            main {g-a: content}
+                            aside {g-a: sidebar;}
+                            footer {g-a: footer}
+
+                            zamiast tego mozemy podac
+                                main {grid-column: 1 / 6}
+                                    albo 
+                                        main {grid-column: content-start / content-end;
+                                            grid-row: content-start / content-end;}
+
+--------------------------------------------------------------------------------------------------------
+
+                                            Przypisywanie reczne
+
+********************** Przy definiowaniu siatki podajemy nazwy poszczegolnych lini ******************
+
+                              [page-start]  grid-template-columns: repeat(8, 1fr)  [page-end];  
+                                            grid-template-rows: repeat(8, 1fr);
+
+                                ***  wtedy musimy podac gdzie to chcemy np header  ***
+               
+                                header {grid-column: 1 / 6} = header page-start / page-end  (bez nawiasow)
+
+
+  *************************************************************************************************************                              
+                                                Auto fill vs auto fit
+            https://www.youtube.com/watch?v=YGXPpz_ULlc&list=PLjHmWifVUNMI4YQLa6lDbVd1D2uYCdc5Z&index=4
+  *************************************************************************************************************
+
+        np w 
+            grid-template-columns: repeat(auto fill, 100px); to znaczy ze jezeli zmniejszamy okno przegladarki 
+                                to boxy zostaja na miejscu (5/8 siatki), do momentu gdy zmniejszymy bardziej, 
+                                wtedy boxy zejda nizej np 2 boxy zejda nizej (responsywnosc)
+                                (dazy do tego aby uzyskac maxymalna liczbe boxow o podanej wartosci)
+                                            UTWORZ TYLE KOLUMN O PODANEJ SZEROKOSCI ILE JESTES W STANIE
+                                            
+            grid-template-columns: repeat(auto fit, 100px); automatyczne dopasowanie siatki do 5 boxow, 
+                                                     zmniejszajac  schodza nizej tj powyzej
+                                                            *** jezeli podamy wartosc(min-max)
+                                                            grid-template-columns: repeat(auto fit, min-max(100px, 1fr)); 
+                                                            (kazdy element zostal rozciagniety zeby wykorzystac maxymalna szerokorc)
+
+
+
+
+        mozemy dodac @media(min-width) ale to nie jest wygodne
+
+        */
+
+    </style>
+
+
+</head>
+<body>
+
+     /* .container>div.box.box${$}*4  */
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+    </div>
+
+</body>
+</html>

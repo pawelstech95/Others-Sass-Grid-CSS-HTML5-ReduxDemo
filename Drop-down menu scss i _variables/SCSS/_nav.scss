@@ -1,0 +1,38 @@
+nav{
+    margin-left: 100px;
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: block; /* Standardowy uklad rozwijanego menu css */ 
+            float: left;
+            li{
+                float: none;
+                display: none;
+                a:hover{  // pozycje w menu rozwijanym zmieniaja kolor
+                    color: green;
+                }
+            }
+                
+            &:hover li { /* jezeli chcemy sie odwolac do czegos wyzej dajemy & wtedy musimy podac co ma byc hover */
+                display: block;
+            }
+            
+        }
+    }
+    a{
+        text-decoration: none;
+        padding: 6px 12px;
+        display: block;
+        border: 1px solid black;
+        background-color: $link-nav-bg-color-defaulut;
+
+        &:hover {/* odwołanie sie do rodzica czyli do a  */
+    
+            color: $nav-link-color-hover;
+        }
+        
+    }
+
+}

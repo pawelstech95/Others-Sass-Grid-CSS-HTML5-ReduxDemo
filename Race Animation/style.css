@@ -1,0 +1,23 @@
+/* https://www.youtube.com/watch?v=AzFOXdLSwo8&list=PLTs20Q-BTEMOrBgIlnABExmFnx7JK-jAm&index=2 */
+
+/* MOZEMY USTALAC ROZMIAR I POZYCJE ELEMENTOW NP BACKGROUND  */
+
+body{
+    margin: 0px;
+}
+div{
+    height: 100vh;
+    background: url('truck.png') no-repeat,
+     url('excavator.png')no-repeat,
+      url('digger.png') no-repeat,
+      url('eco-car.png') no-repeat, 
+      url('police-car.png') no-repeat, 
+      url('deer.png') no-repeat,
+      url('construction-and-tools.png') repeat;
+    background-size: auto 25%, auto 20%, auto 22%, auto 15%, auto 15%, auto 13%, auto 33%;
+    background-position: top 10% left 30%, top 15% left 10%, top 35% left 2%, top 78% left 7%, top 80% left -160%, top 55% left -300%, top 0% left 0%;
+    transition: background-position 20s ease-in;
+}
+div:hover{
+    background-position: top 10% left 130%, top 15% left 40%, top 35% left 70%, top 78% left 200%, top 80% left 260%, top 55% left 510%, top 0% left -2300%;
+}

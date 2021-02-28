@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+body{
+    background-color: pink;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 900px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.paczek{
+    height: 100px;
+    width: 100px;
+    border: 90px solid #c39e38;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: -20px -3px 20px 2px rgba(0, 0, 0, 0.53);
+    transition: transform 10s linear;
+    transition-property: transform, box-shadow; /**/
+    
+}
+.paczek::before{
+    content: '';
+    height: 100px;
+    position: absolute;
+    border: 70px solid #654f11;
+    border-radius: 50%;
+    width: 100px;
+    top: -72px;
+    left: -72px;
+    transform: scale(1.1);
+}
+.paczek::after{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 10px;
+    background-color: #ffffff;
+    top: -72px;
+    left: 50px;
+    border-radius: 3px;
+    transform: rotate(30deg);
+    box-shadow: 
+    0 20px 0 #ffffff,
+    60px 20px 0 1px #fdfd24,
+    -30px 80px 0 #e30953,
+    -10px 160px 0 1px #fdfd24,
+    30px 160px 0 #e30954,
+    50px 200px 0 1px #fdfd24,
+    130px 100px 0 #fc84f3,
+    150px 50px 0 1px #fdfd24,
+    140px 170px 0 1px #fffcfc,
+    100px 150px 0 1px #fc84f3,
+    -20px 100px 0 #fdd324,
+    -40px 40px 0 1px #fffcfc,
+    -50px 120px 0 2px #fc84f3,
+    120px 40px 0 2px #ffffff,
+    20px 40px 0 2px #5b7ff7,
+    0 200px 0 2px #5b7ff7,
+    120px 170px 0 2px #7888bc,
+    150px 12px 0 2px #5b7ff7,
+    80px 200px 0 2px #462525,
+    60px -10px 0 2px #000000,
+    160px 100px 0 2px #292323,
+    60px -10px 0 2px #000000;
+ /* x y blur szerokosc color */  
+}
+.paczek:hover, .paczek:hover ~ .paczek{
+    transform: rotate(360deg);
+}
+
+</style>
+
+
+</head>
+<body>
+    <div class="paczek"></div>
+    <div class="paczek"></div>
+    <div class="paczek"></div>
+    <div class="paczek"></div>
+    <div class="paczek"></div>
+    <div class="paczek"></div>
+    <div class="paczek"></div>
+    <div class="paczek"></div>
+    <div class="paczek"></div>
+    <div class="paczek"></div>
+</body>
+</html>

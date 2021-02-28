@@ -1,0 +1,46 @@
+//Misxin - wstawka
+//@extend - mozemy zamiast mixina dodac extend
+//chodzi o to ze jak zroobimy jakis padding border color itp i musimy dac do kilku innych np
+//.error{
+//@extend: messeage to od to zawrze
+//       }    a np w .message - te parametry ktore chcemy sa juz podane
+// NIE MOZEMY TUTAJ PRZESYLAC ZMIENNYCH
+// ZAMIAST . MESSAGE MOZEMY DODAC %MESSAGE TO WTEDY TO DODA TYLKO JAK DAMY @EXTEND
+// CHODZI O TO ZE W CSS ZAMIAST .MESSAGE REEOR BEDZIE PODANY TYLKO ERROR
+
+
+
+
+//@mixin textOverflow()
+//{
+ //   overflow:hidden;
+  //  white-space: nowrap;
+  //  text-overflow: ellipsis;
+//}
+
+@mixin horizontalGradient($startColor, $endColor) 
+{
+    background-color: $endColor;
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from($startColor), to($endColor));
+    background-image: -webkit-linear-gradient(left, $startColor, $endColor);
+    background-image: -moz-linear-gradient(left, $startColor, $endColor);
+    background-image: -ms-linear-gradient(left, $startColor, $endColor);
+    background-image: -o-linear-gradient(left, $startColor, $endColor);
+    background-image: linear-gradient(left, $startColor, $endColor);
+    background-repeat: repeat-x;
+}
+@mixin center {
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+//MATEMATYKA W SCSS
+
+//$number-of-items: 8;   //zmienna ktora mozemy stosowac zamiast algorytmu   width: ((100% - (4*2%))/4)
+//$image-margin: 16%;      // WAZNE --- KOMPUTER CZYTA OD GORY DO DOLU DLATEGO MUSIMY TO DAC WYZEJ
+@mixin generateRow ($number-of-items, $margin) {
+    width: ((100% - ($number-of-items*$margin))/$number-of-items); // 100% - 4marginesy / 4 dzieki temy wypellniamy 100% calej przestrzeni
+    margin-right: $margin;                                            //dzieki temu mozemy dodawac tyle obrazkow ile chcemy
+}

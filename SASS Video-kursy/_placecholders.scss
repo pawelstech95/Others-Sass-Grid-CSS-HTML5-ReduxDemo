@@ -1,0 +1,17 @@
+// jezeli nie chcemy dawac mixinow bo nam np generuje za duzp kodu
+// to dodajemy placecholdery - uchrzymywanie-miejsca pl
+//  mowimy rozszerz nawigacje o placecholdera @extended %center
+
+
+
+%center {
+    margin: 0 auto;
+    display: block;
+}
+
+%textOverflow
+{
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

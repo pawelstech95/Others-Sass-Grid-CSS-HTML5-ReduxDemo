@@ -1,0 +1,91 @@
+body {
+  margin: 0px;
+  padding: 0;
+  background-image: url('figure/tlo.png');
+  background-size: 100%;
+  background-attachment: fixed;
+}
+.container {
+  width: 1140px;
+  margin: auto;
+  padding: 0px 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+.content {
+  display: block;
+}
+.main-content {
+  width: 70%;
+}
+.sidebar {
+  width: 30%;
+}
+
+form {
+  padding: 15px;
+}
+form div.row {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+form label {
+  width: 30%;
+  text-align: end;
+  display: block;
+  float: left;
+  margin-right: 20px;
+}
+form input,
+form select,
+form textarea {
+  padding: 5px;
+  border-radius: 5px;
+  width: 200px;
+  width: 200px;
+}
+form input[type='checkbox'] {
+  position: relative;
+  left: 30%;
+  width: auto;
+}
+form span {
+  position: relative;
+  left: 30%;
+}
+form input[type='submit'] {
+  width: 100px;
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+form div.row:last-of-type {
+  text-align: center;
+}
+
+.elements {
+  overflow: auto;
+  background-color: tomato;
+}
+.elements div,
+div.elements a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  float: left;
+  background-color: #fff;
+  margin: 20px;
+}
+.elements *:nth-child(2n + 1) {
+  background-color: teal;
+}
+div.elements *:active {
+  background-color: thistle;
+}

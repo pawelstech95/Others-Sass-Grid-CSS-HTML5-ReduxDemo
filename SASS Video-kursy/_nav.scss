@@ -1,0 +1,52 @@
+@import "_mixins.scss";
+@import "_placecholders.scss";
+@import "_functions.scss";
+nav 
+{
+    @extend %center; // mozemy dodac mixin @include center();
+    width: 700px;
+    ul
+    {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+    }
+    li
+    {
+        display: block;
+        float: left;
+        
+        li
+        {
+            display: none;
+            float: none;
+            
+            a:hover
+            {
+                background-color: $link-nav-bg-color-hover;
+            }
+        }
+        ul{
+            position: absolute;
+        }
+        &:hover li
+        {
+            display: block;
+        }
+    }
+    a
+    {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        background-color: lighten($link-nav-bg-color-default, 20%);  // w internecie mozna znalezc schematy , dzieki temu rozjasnilismy o 25%
+        color: automaticContrast($link-nav-bg-color-default, $link-color);
+        
+        &:hover
+        {
+            color: $link-nav-color-hover;
+        }
+    }
+    
+}

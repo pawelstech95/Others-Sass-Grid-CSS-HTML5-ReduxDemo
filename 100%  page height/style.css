@@ -1,0 +1,43 @@
+/* https://www.youtube.com/watch?v=oEgG3pHIlfo&list=PLey41OEzns8RRSXHKd8gl-zshM770ya7-&index=31 */
+
+/*  */
+
+* { margin: 0; padding: 0px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+header {
+    background: url('tlo.jpg') center no-repeat ;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover; /* uzycie zawsze w calym oknie przegladarki */
+    border: 1px solid yellow;
+    display: flex;  /* wyswietlanie jeen o drugim */
+    align-items: center; /* na srodek */
+    justify-content: center; /* */
+    flex-direction: column; /* JEDEN POD DRUGIM */
+}
+h1, h2 {
+    text-align: center;
+    color: rgb(66, 12, 12);
+}
+h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+h2{
+    font-size: 26px;
+}
+button{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 260px;
+    height: 70px;
+    padding: 20px;
+    background-color: thistle;
+    border: 3px solid rgb(197, 176, 197);
+    color: #fff;
+    font-size: 19px;
+    margin-top: -35px;
+    margin-left: -130px;
+    
+}

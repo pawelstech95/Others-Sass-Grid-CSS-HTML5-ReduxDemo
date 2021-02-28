@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-image: url('tlo1.jpeg');
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .photo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: white;
+        margin: 50px 60px;
+        padding: 10px;
+        width: 200px;
+        border-radius: 5px;
+        border: 2px solid whitesmoke;
+        box-shadow: 3px 3px 12px 1px;
+        box-sizing: border-box;
+        opacity: 0.7;
+        transform: rotate(5deg);
+        transition: 0.3s all linear;
+      }
+      .photo img {
+        width: 200px;
+        height: 200px;
+        size: cover;
+      }
+      .photo fidcaption {
+        margin-top: 10px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+          'Lucida Sans', Arial, sans-serif;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 700;
+      }
+
+      .photo:nth-child(even) {
+        transform: scale(0.9) rotate(-2deg);
+      }
+      .photo:hover {
+        opacity: 1;
+        transition: 0.3s all linear;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <figure class="photo">
+        <img src="8.jfif" alt="1" />
+        <fidcaption>8</fidcaption>
+      </figure>
+      <figure class="photo">
+        <img src="7.jfif" alt="2" />
+        <fidcaption>1</fidcaption>
+      </figure>
+
+      <figure class="photo">
+        <img src="2.jfif" alt="4" />
+        <fidcaption>3</fidcaption>
+      </figure>
+      <figure class="photo">
+        <img src="3.jfif" alt="5" />
+        <fidcaption>4</fidcaption>
+      </figure>
+      <figure class="photo">
+        <img src="4.jfif" alt="6" />
+        <fidcaption>5</fidcaption>
+      </figure>
+      <figure class="photo">
+        <img src="5.jfif" alt="7" />
+        <fidcaption>6</fidcaption>
+      </figure>
+      <figure class="photo">
+        <img src="8.jfif" alt="8" />
+        <fidcaption>8</fidcaption>
+      </figure>
+    </div>
+  </body>
+</html>

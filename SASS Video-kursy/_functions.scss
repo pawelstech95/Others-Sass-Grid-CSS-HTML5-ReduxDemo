@@ -1,0 +1,25 @@
+// podobna do mixinow tylko nie zwraca nam styli tylko wartosc po obliczeniach
+
+// @function nazwa_funkcji($variable)//to oznacz zmienna ktora zmieniamy czyli variable + 30 a nie 7 + 30
+// {
+//     @return ($variable)+10; // zwraca nam 5 px czyli np jak mamy 15 px i damy 
+// }
+
+
+
+
+// INSTRUKCJE WARUNKOWE 
+
+
+@function automaticContrast($backgroundColor, $textColor) // przes;a;ismy bgcolor i texcolor a zwrocilismy textcolor
+    {
+        @if lightness($backgroundColor) < 50%
+        {
+            @return lighten($textColor, 30%);
+        }
+        @else
+        {
+            @return darken($textColor, 30%);
+        }
+    }//jezeli bgc jest jasne to tekst jest ciemniejszy i na odwrot
+     // korzystamy z czegos jak nam sie ma przydac i czerpiemy zrodla z neta

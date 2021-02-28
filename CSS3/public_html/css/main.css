@@ -1,0 +1,1040 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/*                                          Transformacja tekstu
+    p.capitalize
+    {
+        text-transform: capitalize;
+    }
+    p.uppercase
+    {
+        text-transform: uppercase;
+    }
+    p.lowercase
+    {
+        text-transform: lowercase;
+    }
+*/
+/*                                                 Cienie
+                                inset - od wewnatrz
+                                outline - na zewnatrz
+
+
+
+#putshadowonme
+{
+    background-color: cadetblue;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: 80px;
+    -webkit-box-shadow: 61px 65px 58px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 61px 65px 58px 0px rgba(0,0,0,0.75);
+    box-shadow: 61px 65px 58px 0px rgba(0,0,0,0.75);
+}
+h1.putshadowonme
+{
+    text-shadow: -37px -43px 3px rgba(218, 223, 226, 0.69);
+    margin: 100px;
+    color: black;
+    position: absolute;
+}
+*/
+/*                                       Przeźroczystość i gradienty
+
+
+ body
+        {
+            background-image: url('tlomale.png');
+        }
+        div.przezroczyste_tlo
+        {
+            background-color: rgba(204, 204, 204, 0.7);
+            margin: 100px;
+            padding: 100px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+            width: 500px;
+            text-align: center;
+            background: linear-gradient(to right, rgba(180,223,238,1) 0%, rgba(40,192,230,0.76) 53%, rgba(189,227,239,0.55) 99%, rgba(189,227,239,0.55) 100%);
+            border-radius: 99px 20px 99px 20px;
+        }
+
+
+
+    /*  - za pomoca generatorow mozna uzyskac rozne efekty
+            
+            background: linear-gradient(#fff, #000); - przejscie kolorow tla - jezeli dodajemy z 
+                                generatorow i nie dziala nam to to 
+                                    musimy dodac ( ***to*** bottom rgb, rgb, 80% ) cssmatic.com
+                                linear-gradient(#fff, #000); lewa gora prawy dol, prawa gora lewy dol
+                                    ja zastosowalem z generatora
+            border-radius: 50px;    
+
+
+            *************************************************************************************************
+           -pie-background color: rgba(204, 204, 204, 0.7); ---------- dla starszego IE
+            behavior: url("PIE.htc");
+            opacity: 0.5; ------------------------------ nie dziala jak chcemy dac tylko przezroczysty blok
+            *************************************************************************************************
+        div.przezroczyste_tlo p.tekst ----------- nie dziala
+        {
+            opacity: 1.0;
+        }
+*/
+/*                                      Transitions - plynne przejscia
+
+                        
+          body
+        {
+            background-image: url('tlomale.png');
+        }
+        div.przezroczyste_tlo
+        {
+            background-color: rgba(204, 204, 204, 0.7);
+            margin: 100px;
+            padding: 100px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+            width: 500px;
+            text-align: center;
+            background: linear-gradient(to right, rgba(180,223,238,1) 0%, rgba(40,192,230,0.76) 53%, rgba(189,227,239,0.55) 99%, rgba(189,227,239,0.55) 100%);
+            border-radius: 99px 20px 99px 20px;
+        }
+        div.zakladka
+        {
+            background-color: rgba(204, 204, 204, 0.7);
+            margin: 50px;
+            padding: 15px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 10px;
+            width: 70px;
+            text-align: center;
+            background: linear-gradient(to right, rgba(180,223,238,1) 0%, rgba(40,192,230,0.76) 53%, rgba(189,227,239,0.55) 99%, rgba(189,227,239,0.55) 100%);
+            border-radius: 99px 20px 99px 20px;
+            transition: color 4s ease;
+        }
+        .zakladka:hover   jak damy tak to caly div a jak .zakladka :hover to tylko tekst 
+        {
+            cursor: pointer;
+            color: yellow;
+            opacity: 0.6; tutaj tez mozemy dodawac czas w sek 
+            transition: color 4s linear; /* przejscie - unhover zeby dzialalo to musimy dodac w divie tez 
+                                    color-przejscie dotyczy tylko koloru
+                                    all- zmiana kazdej podanej wlasciwosci
+                                    ***mozna dodawac cubic-beizer***
+                                    transition: color 4s ease; czego dotyczy, czas, typ przejscia
+                                    ease*wolny na poczatku, szybko, wolno
+                                    linear*caly czas tak samo
+                                    ease-in*wolny na poczatku, pozniej normalnie
+                                    ease-out*wolny na koncu wczesniej normalnie
+                                    ease-in-out - wolny na poczatku pozniej normalny pozniej wolny
+                                    
+        }
+        div#klocekcontent ***  Dzieki temu mamy przejscie boxu od punktu a do punktu b  ***
+        {                                                       poprzez margin-left idzie w poziomie
+            background-color: rgb(128, 0, 0);                       
+            width: 300px;
+            height: 50px;
+        }
+        div.klocek
+        {
+            background-color: yellowgreen;
+            width: 50px;
+            height: 50px;
+            transition: all 4s cubic-bezier(.1,1.09,.73,-0.1);      generator *** powrot *** 
+        }
+        div#klocekcontent:hover .klocek                 
+        {
+            margin-left: 250px;
+            opacity: 0.6;
+            transition: all 4s linear;
+            
+        }
+
+*/
+/*                                          Transformacje 2D, Animacje
+
+                            transform: scale (0.3)- scalowanie proporcjonalne
+                                        rotate (180deg)
+                            transform: translate(10px, 5px) - translacja w dol i w prawa os y 
+                                        skew - pochylenie (30deg, 80deg) os x  i y
+
+    animation: obracanie 3s;  zamiast transition wstawiamy animation i nadajemy nazwe do ktorej sie odwolamy 
+             @keyframes obracanie *** opisujemy po kolei klatki naszej animacji ***
+                {
+                    from
+                    {
+                        transform: rotate(0deg);
+                    }
+                    to
+                    {
+                        transform: rotate(450deg);
+                    }
+                }
+
+
+                             none - 0 - ease - 0 - 1/infinitie - normal
+       *** nzw * czas zmiany * funkcja zmiany * opóźnienie * ilość powtorzeń * jak powtarzac ***
+
+                        Jak powtarzać - normal
+                                        reverse - w druga strone
+                                        alternate - raz w jedna raz w druga
+                                        alternate-reverse - raz w jedna raz w druga zaczynajac od drugiej strony
+
+
+*******************************************************************************************************************************
+
+                       body
+        {
+            background-image: url('tlomale.png');
+        }
+        
+        div.zakladka
+        {
+            background-color: rgba(204, 204, 204, 0.7);
+            margin: 50px;
+            padding: 15px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 10px;
+            width: 70px;
+            text-align: center;
+            background: linear-gradient(to right, rgba(180,223,238,1) 0%, rgba(40,192,230,0.76) 53%, rgba(189,227,239,0.55) 99%, rgba(189,227,239,0.55) 100%);
+            border-radius: 99px 20px 99px 20px;
+            animation: obracanie2 3s infinite alternate;
+        }
+        .zakladka:hover   jak damy tak to caly div a jak .zakladka :hover to tylko tekst  
+        {
+            cursor: pointer;
+            color: yellow;
+            opacity: 0.6; *** tutaj tez mozemy dodawac czas w sek ***
+            animation: obracanie 3s infinite alternate; *** zamiast transition wstawiamy animation i nadajemy nazwe do ktorej sie odwolamy *****
+            transform: translate(10px, 5px)
+           
+        }
+        div#klocekcontent
+        {
+            background-color: rgb(128, 0, 0);
+            width: 300px;
+            height: 50px;
+        }
+        div.klocek
+        {
+            background-color: yellowgreen;
+            width: 50px;
+            height: 50px;
+            transition: all 4s cubic-bezier(.1,1.09,.73,-0.1);
+        }
+        div#klocekcontent:hover .klocek
+        {
+            margin-left: 250px;
+            opacity: 0.6;
+            transition: all 4s linear;
+        }
+        @keyframes obracanie ******* opisujemy po kolei klatki naszej animacji 
+        {
+            from
+            {
+                transform: rotate(0deg);
+            }
+            to
+            {
+                transform: rotate(450deg);
+            }
+        }
+        @keyframes obracanie2
+        {
+            0%
+            {}
+            30%
+            {
+                transform: rotate(180deg);
+            }
+            50%
+            {
+                transform: translate(170px, 0px);
+            }
+            100%
+            {
+                transform: rotate(-360deg);
+                opacity: 0.2;
+            }
+        }
+    
+
+
+
+
+
+*/
+/*                                          Transformacje 3d
+
+            .face
+        {
+            width: 100%;
+            height: 100%;
+            background-color: aquamarine;
+            transform: rotateY(45deg); - rotate x,y,z
+        }
+
+        **************************************************
+                                        Jezeli priserve 3d usuniemy to bedzie plaski wymiar i nie bedzie nam dzialalo przejscie pomiedzy divami front i end
+        transform-style: preserve-3d; - zachowane 3d *** WAZNE ABY OBIEKT 3D MIAL TO ZACHOWANE ***
+                        flat - domyslne - plaskie
+        transform: rotateY(180deg);
+        perspective: 1000px; - perspektywa widzenia
+        backface-visibility: hidden; - po obrocie druga strona pusta *** WAZNE JEZELI CHCEMY DAC Z TYLU COS INNEGO ***
+        backface-visibility: hidden; - jezeli nie damy tego to raz na jakis czas te divy beda sie zlewac
+
+        div#kontener
+        {
+            width: 200px;
+            height: 400px;
+            border: 1px solid #ccc;
+            margin: 40px;
+            perspective: 1000px;
+            position: relative;
+        }
+        #card
+        {
+            transform-style: preserve-3d;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: 1s;
+            transform-origin: 100% 50%;  to ustala w ktorym miejscu jest srodek osi y , teraz jest efekt 
+                                            ksiazki 
+            }
+            .face
+            {
+                backface-visibility: hidden;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                color: white;
+                font-size: 80px;
+                line-height: 400px;
+                text-align: center;
+            }
+            .front
+            {
+                background-color: aquamarine;
+            }
+            .end
+            {
+                background-color: chartreuse;
+                transform: rotateY(180deg);  ustawilismy ze to jest z tylu na starcie jest teraz tym ukrytem backfacem 
+            }
+            #card:hover
+            {
+                transform: translate(-100%) rotateY(180deg); /* wyzej dalismy efekt pezewracania kartki 
+                                            jak w ksiazce a teraz ten srodek osi y cofa sie o 100% 
+    
+                
+            }
+
+*/
+/*                                                  Kostka 3d
+
+********** jak damy backface-visibility: hidden; to nie widac tego co jest za frontowymi sciankami************
+
+
+
+@keyframes obracaniekostki
+       {
+           0%
+           {
+                transform: rotateX(45deg);
+           }
+           20%
+           {
+               transform: rotatex(180deg);
+           }
+           40%
+           {
+               transform: rotateZ(90deg);
+           }
+           60%
+           {
+               transform: rotateZ(-90deg)
+           }
+           80%
+           {
+               transform: rotateY(180deg);
+           }
+           100%
+           {
+               transform: rotateX(45deg);
+           }
+       }
+
+
+
+
+
+
+
+
+
+        #scena
+       {
+           perspective: 1000px;
+           position: relative;
+           width: 200px;
+           height: 200px;
+           border: 1px solid #cccc;
+           margin: 150px;
+           
+       }
+       #kostka
+       {
+           position: absolute;
+           transform-style: preserve-3d; 
+           width: 100%;                   wazne aby tu i w scianie bylo podane 
+           height: 100%;
+           transform: rotatey(45deg);
+           animation: obracaniekostki 7s infinite alternate;
+           
+       }
+       .sciana 
+       {
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           font-size: 50px;
+           color: tomato;
+           line-height: 200px;     *** dalej nie wiem co to ***
+           text-align: center;
+           opacity: 0.6;
+           
+       }
+       div.front
+       {
+            background-color: teal;
+            transform: translateZ(100px)
+       }
+       div.back
+       {
+            background-color: rgb(9, 10, 10);
+            transform: rotateX(180deg) translateZ(100px);
+       }
+
+       div.left
+       {
+            background-color: rgb(81, 0, 128);
+            transform: rotatey(-90deg) translateZ(100px);
+       }
+
+       div.right
+       {
+            background-color: rgb(128, 0, 0);
+            transform: rotatey(90deg) translateZ(100px);
+       }
+
+       div.top
+       {
+            background-color: rgb(58, 128, 0);
+            transform: rotateX(90deg) translateZ(100px);
+       }
+
+       div.bottom
+       {
+            background-color: rgb(255, 255, 255);
+            transform: rotateX(-90deg) translateZ(100px);
+
+       }
+       @keyframes obracaniekostki
+       {
+           from
+           {
+                
+           }
+           to
+           {
+               transform: rotateX(360deg) rotateZ(360deg) rotateY(360deg);
+           }
+       }
+
+*/
+/*                                              Zabawa z tlem
+
+
+ #test
+       {
+           width: 300px;                                        dajemy dwa tla pod background wymieniamy tla po ,
+           height: 200px;                                   
+           margin: 30px;
+           background: no-repeat center url(../../../../Obrazy/ddd.png), no-repeat center url(../../../../Obrazy/tlomale.png);
+           background-size: contain;
+           background-origin: content-box; mozna np dac tlo pod tekstem
+           background-clip: content-box; wciecie
+       }
+
+
+      
+*/
+/*                                        Wielokolumnowy uklad tresci
+       
+       
+ 
+        #test
+        {
+            text-align: justify;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 20px;
+            column-count: 2; podzial kolumny
+            column-gap: 150px; luka pomiedzy kolumnami
+            column-rule: 15px solid green; zawartosc jakas pomiedzy kolumnami
+        }
+
+
+
+*/
+
+
+/*                               Flex Box layaut - elastyczny uklad w pudelku
+
+
+                display: flex - bloki sa jeden za drugim
+                    :   blok jeden pod drugim
+    Domyslne ustawienie:
+                flex-direction: row; - tak jak wiersz***column
+                align-items: stretch; rozciagacz pionowy
+                    align-items: end;
+                    align-items: start;
+********************************************************************
+                justify-content: flex-end; ustawienie pionowe end
+                        dziala wzzgledem togo co jest w flex-direction
+                align-items dziala w przeciwna strone niz flex-direction
+                flex-wrap: wrap - zawin jak sie nie miesci
+***********************************************************************************88
+        flex: 0 1 auto - wzrost malenie dopasowywanie wolnego  miejsca w przestrzeni
+
+            JEZELI NIE DAMY MIN WIDTH I HEIGHT TO 1- CZYLI MALENIE WRAZ ZE ZMNIEJSZANIEM SIE OKIENKA MALEJE
+
+
+                mozna za pomoca tego dostosowywac ile bedzie zajmowac
+            flex: 0 1 auto
+                  5 1 0 - jezeli mamy 3 diwy z flrxem to jak damy na jeden 5 to on zajmuje 5/7
+                                tylko jezeli nie damy auto, bo auto dostosowuje wolna przestrzen
+            flex: 5 ** nie powinno sie tak robic bo moze zle komputer odczytywac nasze zamiary
+
+            order: 0 - kolejność - dodajemy do div 1 2 3
+
+
+
+
+
+            
+        #container
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: stretch;
+            height: 300px;
+            width: 100%;
+        
+        }
+        #container div
+        {
+            min-width: 200px;
+            min-height: 100px;
+        }
+        #container div:nth-child(1)
+        {
+            flex: 0 1 auto;
+            background-color: blue;
+        }
+        #container div:nth-child(2)
+        {
+            flex: 0 1 auto;
+            background-color: green;
+        }
+
+        #container div:nth-child(3)
+        {
+            flex: 0 1 auto;
+            background-color: red;
+        }
+
+*/
+/*                                       Flex Box - szablon strony
+
+
+
+
+
+
+            #container
+            {
+                border: 1px solid pink;
+            }
+
+            #container > *:not(#middleflow), #middleflow > * ********* Wszystkie pierwsze elementy wystepujace w kontenerze ******* :not(#middleflow) wszystko tylko nie to ******   ***** 
+            {
+                min-height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            #middleflow
+            {
+                display: flex;
+                margin: 10px;
+                flex-direction: column;
+            }
+            header
+            {
+                background-color: seagreen;
+            }
+            nav
+            {
+                flex: 1;
+                background-color: rgb(139, 65, 46);
+            }
+            article
+            {
+                flex: 7;
+                background-color: rgb(193, 210, 218);
+                padding: 10px;
+                margin: 0px 10px;
+
+            }
+            aside
+            {
+                flex: 1;
+                background-color: rgb(88, 139, 46);
+            }
+            footer
+            {
+                background-color: rgb(63, 46, 139);
+            }
+
+*/
+
+/*                                     Viewport, responsive web design 76,77
+
+
+
+
+*/
+/*                                              Anonimowy button w 3d
+
+
+
+
+
+            #button_link
+            {
+                margin: 50px auto;
+                display: table;
+                perspective: 600px;
+              
+            }
+            #button_link a
+            {
+                border: 1px solid #bce0ee;
+                padding: 50px;
+                text-decoration: none;
+                color: white;
+                background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(66,190,230,0.88) 41%, rgba(41,184,229,0.88) 50%, rgba(188,224,238,0.88) 100%);
+                font-family: 'PT Sans', sans-serif;
+                font-size: 30px;
+                border-radius: 6px 12px;
+                opacity: 0.6;
+                box-shadow: 3px 3px 0px 0px rgba(50,149,179,1), 0px 9px 10px rgba(0, 0, 0, 0.7) ;  horyzontalnie, dół, rozmyty rgba ( 0,0,0,0.4 )
+                transition: 0.2s;
+                display: block; ****************** a link ma inne display domyslny  ********************
+                transform: rotateX(45deg);      jak damy block to transform zadziala
+            }
+            #button_link a:hover
+            {
+                opacity: 1;
+                
+            }
+            #button_link a:active
+            {
+                position: relative;
+                top: 3px;
+                transform: rotateX(40deg);
+                
+                
+                box-shadow: 3px 3px 0px 0px rgba(50,149,179,1), 0px 3px 6px rgba(0, 0, 0, 0.7) ;  horyzontalnie, dół, rozmyty rgba ( 0,0,0,0.4 )
+            }
+
+
+
+
+
+*/
+/*                                              Rozwijane menu css3
+
+
+
+body
+{
+    background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 13%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+}
+#menu a 
+{
+    text-decoration: none;
+    color: white;
+    display: block;    zeby mozna bylo kliknac byle gdzie i zeby byl hover 
+    
+}
+#menu a:visited
+{
+    color: white;
+}
+#menu a:link
+{
+    color: white;
+}
+#menu li 
+{
+    list-style: none;
+}
+#menu > li 
+{
+    float: left;
+}
+#menu > li > a
+{
+    
+    padding: 10px;
+    background: linear-gradient(to right, rgba(147,206,222,0.8) 0%, rgba(117,189,209,0.8) 41%, rgba(73,165,191,0.8) 100%);
+    border-left: 1px solid #ccc;
+    border-bottom:1 px solid #ccc ;
+    font-family: 'Times New Roman', Times, serif;
+    transition: 0.2s;
+}
+#menu > li > a:hover
+{
+    background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    color: #2e3c2e;
+}
+#menu > li:first-child > a
+{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+} 
+#menu > li:last-child > a
+{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#menu > li ul li a
+{
+    padding: 30px 15px;
+    border-bottom: 1px solid #ccc;
+    transition: 0.5s;
+    
+}
+#menu > li ul li a:hover
+{
+    color: #2e3c2e;
+    background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+}
+#menu ul  musielismy to dac poniewaz domyslnie w normalize css bylo ustawione inaczej i padding nie pasowalo  
+{
+    padding: 0px;
+    margin: 0px;
+}
+#menu > li ul      dajemy tak zeby gorne menu nam sie nie rozjechalo jezeli tutaj bedzie za duzo tresci  
+{
+    position: absolute;
+    background: linear-gradient(to right, rgba(147,206,222,0.8) 0%, rgba(117,189,209,0.8) 41%, rgba(73,165,191,0.8) 100%);
+    border-left: 1px solid #ccc;
+    font-size: 12px;
+    opacity: 0;
+    transition: 1s;
+}
+#menu > li:hover ul
+{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+   

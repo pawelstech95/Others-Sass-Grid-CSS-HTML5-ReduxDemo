@@ -1,0 +1,34 @@
+/* https://www.youtube.com/watch?v=Cui2AYkf1dU&list=PLTs20Q-BTEMOrBgIlnABExmFnx7JK-jAm&index=3 */
+
+.circle {
+    width: 40vh;
+    height: 40vh;
+    background-color: rgb(191, 216, 202);
+    border-radius: 50%;
+    border-bottom: 120px solid red;
+    border-left: 120px solid blue;
+    border-right: 120px solid green;
+    border-top: 120px solid orange;
+    margin: 0 auto;
+    transition: transform 5s ease, border 3s ease-in-out, background-color 10s ease;
+} 
+.active/*.circle:hover */ {
+    transform: rotate(3600deg) /*scale(0)*/;
+    border-bottom: 120px solid pink;
+    border-left: 120px solid rgb(14, 14, 41);
+    border-right: 120px solid rgb(0, 60, 128);
+    border-top: 120px solid rgb(8, 46, 11);
+    background-color: plum;
+
+}
+
+
+button {
+    background-color: brown;
+    color: white;
+    width: 200px;
+    height: 20px;
+    display: block;
+    margin: 20px auto;
+    border: none;
+}

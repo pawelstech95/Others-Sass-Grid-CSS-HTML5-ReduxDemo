@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    <style>
+        body{
+            background-color: beige;
+            margin: 0px;
+            padding: 0px;
+        }
+        .rose{
+            width: 13px;
+            height: 300px;
+            background: #198419;
+            position: relative;
+            left: 50%;
+            top: 200px;
+            border-radius: 20%;
+            box-shadow: 0px -350px 0px 50px #d31717;
+            transform-style: preserve-3d;
+            perspective: 300px;
+            transform: rotateY(360deg);
+            
+        }
+        .rose::after {
+            content: '';
+            width: 10px;
+            height: 5px;
+            position: absolute;
+            background-color: #096809;
+            border-radius: 4px;
+            top: 0px;
+            right: 0px;
+            box-shadow: 
+            6px 200px 0px #096809,
+            -8px 55px 0px #096809,
+            4px 110px 0px #096809,
+            -6px 159px 0px #096809,
+            -2px -100px 0px 5px #d31717,
+            -2px -100px 0px 9px #ff0000,
+            -2px -100px 0px 15px #d31717,
+            -2px -100px 0px 20px #ff0000,
+            -2px -100px 0px 23px #d31717,
+            -2px -100px 0px 25px #d31717,
+            -2px -100px 0px 27px #ff0000,
+            -2px -100px 0px 29px #d31717,
+            -2px -100px 0px 31px #ff0000,
+            -2px -100px 0px 36px #d31717,
+            -2px -100px 0px 38px #ff0000,
+            -2px -100px 0px 42px #d31717,
+            -2px -100px 0px 46px #ff0000,
+            -2px -100px 0px 49px #d31717,
+            -2px -100px 0px 51px #ff0000,
+            0px -160px 0px 75px beige
+            
+            ;
+        }
+        .rose::before{
+            background-color: #096809;
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            content: ''; /* jezeli nie damy content jak mamy pusty div to nic sei nie wyswietli */
+            border-top-left-radius: 90%;
+            border-bottom-right-radius: 90%;
+            top: 150px;
+            right: 3px;
+            box-shadow: 98px -100px 0px 0px #096809;
+        }
+        .rose:hover{
+            transition: all 10s ease;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="rose"></div>
+</body>
+</html>

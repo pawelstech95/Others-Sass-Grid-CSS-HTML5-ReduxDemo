@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+body{
+    background-color: teal;
+    padding: 0px;
+}
+.hamburger{
+    width: 40px;
+    height: 35px;
+    border: 0px;
+    border-top: 5px solid #ffffff;
+    background: transparent; /* jezeli to damy to przenika kolor */
+    position: relative;
+    transition: 0.3s transform linear;
+}
+.hamburger::before, .hamburger::after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    border-top: 5px solid #ffffff;
+    transform: translateY(10px);
+}
+.hamburger::after{
+    transform: translateY(25px);
+    transition: 0.3s transform linear;
+}
+.hamburger:hover{
+    transform: rotate(45deg) ;
+    border: none;
+    
+
+}
+.hamburger:hover::after{
+    transform: rotate(-90deg) translateX(-10px);
+}
+.hamburger:focus{
+    transform: rotate(-45deg) ;
+    border: none;
+    
+
+}
+.hamburger:focus::after{
+    transform: rotate(90deg) translateX(10px);
+}
+
+</style>
+
+
+</head>
+<body>
+    <button class="hamburger"></button>
+</body>
+</html>

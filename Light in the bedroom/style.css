@@ -1,0 +1,50 @@
+/* https://www.youtube.com/watch?v=rwGWaSrJUtw&list=PLTs20Q-BTEMOrBgIlnABExmFnx7JK-jAm&index=4 */
+
+* {margin: 0px; padding: 0;
+}
+
+#dark, #room, #button{
+    position: absolute;
+}
+#room{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('room.jpg');
+    background-size: cover; /* lepiej zamiast 100% poniewaz jak zmniejszymy okno to tez bd 100% */
+    background-position: center;
+    z-index: 1;
+}
+#dark{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 2;
+    transition: all 1s ease;
+}
+#button{
+    width: 100px;
+    height: 100px;
+    border: 50px solid greenyellow;
+    z-index: 3;
+    border-radius: 50%;
+    box-sizing: border-box /* border jest wliczany w element */;
+    top: 30px;
+    left: 30px;
+    animation: switchOff 300ms linear infinite alternate;
+
+}
+#button:hover + #dark {
+    background-color: transparent; /* pokaz to co jest pod nim */
+}
+
+
+@keyframes switchOff {
+    0% {
+        border: 0px solid greenyellow;
+        opacity: 0;
+    }
+    100% {
+        border: 50px solid greenyellow;
+        opacity: 1;
+    } /* powinnismy dac from to */
+}

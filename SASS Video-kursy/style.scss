@@ -1,0 +1,91 @@
+@import "_variables.scss";
+@import "_nav.scss";
+@import "_mixins.scss";
+@import "_functions.scss";
+
+#header
+{
+    height: $header-height;    
+}
+h1{
+   font-size: $header-size; 
+   color: $header-color;
+   
+}
+h2{
+   font-size: $header-size - 7px; 
+   color: $header-color;
+}
+
+a{
+    color: $link-color;
+}
+
+
+.akapit
+{
+    width: 100px;
+    height: 50px;
+    @extend %textOverflow; // zamiast mixina zastosowalismy placecholdera
+    @include horizontalGradient(#FFC, #FF0);
+    clear: left; // jezeli chcemy wycentrowac to dajemy ,margin 0 auto i, display block
+                // w przypadku nav to nie dziala poniewaz szeroksc bloku zawsze jest maxymalna, musimy dodac szerokosc
+    @include center();
+    font-size: nazwa_funkcji(100px);
+}
+
+
+
+.image{
+    @include generateRow(10, 4%);  // 5 items and 2%margin
+    float: left;
+    background-color: rgb(233, 229, 229);
+    border: 1px solid gray;
+   // width: ((100% - ($number-of-items*$image-margin))/$number-of-items); 
+    text-align: center;             
+    padding: 10px;
+   // margin-right: $image-margin;
+    box-sizing: border-box; // uwzglednia nam zdjecie border i padding - musimy tylko dodac sobie margon
+    @media (max-width: 640px){
+        @include generateRow (2, 4%)
+    }
+    @media (min-width: 640px) and (max-width: 980px){
+        @include generateRow (3, 14%)
+    }
+    @media (min-width: 980px){
+        @include generateRow (6, 4%)
+    } //    ROZNE WIELKOSCI URZADZEN
+}
+
+img{
+    width: 100%;
+}
+.image_description{
+    display: inline-block;
+}
+
+
+
+//Loops petla@for
+
+
+//        @for $i from 6 to 0//petla zmienna jak przejscia maja wygladac
+//        {
+//            h#{$i} {  // h# czyli h1 2 3 4 5 6
+//            font-size: 50px - $i * 3; // bazowa to 50px - i *3
+//            }
+//        }
+
+// lista w petlach  @each
+
+$header-list: h1 h2 h3 h4 h5 h6 'cos innego'; // jezeli chcemy dodac jakis inny selektor to ''
+$i: 1; //  interpretujemy zeby sass wiedzial jaka to ma wartosc // wyzej mial podane ze ma od 6 do 0
+@each $current-header in $header-list {
+    #{$current-header}
+    {
+        font-size: 50px - $i * 3; // bazowa to 50px - i *3
+        $i: $i +3 // jak petla bedzie przechodzila przez ..
+    }
+    
+}
+@import "compass"
